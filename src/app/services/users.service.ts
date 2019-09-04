@@ -22,6 +22,6 @@ export class UsersService {
   // }
 
   getUsers(): Observable<User[]> {
-    return this.http.get(this.getUsersUrl).pipe(map(result => result.data));
+    return this.http.get(this.getUsersUrl).pipe(map(result => result["data"]));
   }
 }
